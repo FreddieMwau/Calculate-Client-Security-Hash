@@ -1,10 +1,12 @@
 {
   "name": "Calculate-Client-Security-Hash",
   "projectId": "1d7396a3-a182-40cd-95cb-bc2fc4d811bf",
-  "description": "Robotic Enterprise Framework",
+  "description": "REFramework Project using Tabular Data Source from ACME Systems 1.\r\nThis automation's main objective is to process ACME Client information of type W15 to generate SHA1 Encrypted string and update the Work Item with the having the encrypted string as a comment plus change the status to Completed.",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Excel.Activities": "[2.23.4]",
+    "UiPath.Mail.Activities": "[1.23.1]",
     "UiPath.System.Activities": "[24.10.3]",
     "UiPath.Testing.Activities": "[24.10.0]",
     "UiPath.UIAutomation.Activities": "[24.10.0]"
