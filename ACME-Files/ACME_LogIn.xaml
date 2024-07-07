@@ -3,7 +3,8 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_str_ACMEURLLink" Type="InArgument(x:String)" />
     <x:Property Name="in_str_ACMECredentials" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_OutlookCredentials" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_OutlookPassword" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_str_OutlookUsername" Type="InArgument(x:String)" />
   </x:Members>
   <this:ACME_Open.in_str_ACMEURLLink>
     <InArgument x:TypeArguments="x:String" />
@@ -11,10 +12,16 @@
   <this:ACME_Open.in_str_ACMECredentials>
     <InArgument x:TypeArguments="x:String" />
   </this:ACME_Open.in_str_ACMECredentials>
+  <this:ACME_Open.in_str_OutlookPassword>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:ACME_Open.in_str_OutlookPassword>
+  <this:ACME_Open.in_str_OutlookUsername>
+    <InArgument x:TypeArguments="x:String" />
+  </this:ACME_Open.in_str_OutlookUsername>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1102,2105.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1102,1954.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ACME_Open_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -130,33 +137,30 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow is responsible on opening the Edge Browser and gaining access into ACME System Web Application and navigating to the dashboard, throws a Business Exception if log in fails" DisplayName="ACME_Open" sap:VirtualizedContainerService.HintSize="1112,2040.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow is responsible on opening the Edge Browser and gaining access into ACME System Web Application and navigating to the dashboard, throws a Business Exception if log in fails" DisplayName="ACME_Open" sap:VirtualizedContainerService.HintSize="1112,1890" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Edge Browser" sap:VirtualizedContainerService.HintSize="1050,1922" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" OutUiElement="[out_ui_ACMEBrowserElement]" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Edge Browser" sap:VirtualizedContainerService.HintSize="1050,1771.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" OutUiElement="[out_ui_ACMEBrowserElement]" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Log In to ACME" sap:VirtualizedContainerService.HintSize="1016,1680" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Log In to ACME" sap:VirtualizedContainerService.HintSize="1016,1529.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="ss:SecureString" Name="str_ACMEPassword" />
               <Variable x:TypeArguments="x:String" Name="str_ACMEUsername" />
               <Variable x:TypeArguments="x:Boolean" Name="bool_InvalidCredentials" />
-              <Variable x:TypeArguments="ss:SecureString" Name="str_OutlookPassword" />
-              <Variable x:TypeArguments="x:String" Name="str_OutlookUsername" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:GetSecureCredential CredentialType="Generic" DisplayName="Get Outlook Credentials" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="GetSecureCredential_2" Password="[str_OutlookPassword]" PersistanceType="Enterprise" Target="[in_str_OutlookCredentials]" Username="[str_OutlookUsername]" />
             <p:GetSecureCredential CredentialType="Generic" DisplayName="Get ACME Credentials" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[str_ACMEPassword]" PersistanceType="Enterprise" Target="[in_str_ACMECredentials]" Username="[str_ACMEUsername]" />
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Email Address/Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Text="[str_ACMEUsername]" Version="V3">
               <uix:NTypeInto.Target>
@@ -215,20 +219,16 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,546.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,510" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence sap2010:Annotation.AnnotationText="This business exception triggers an email to be sent over" DisplayName="Target appears - Throws a Business Exception" sap:VirtualizedContainerService.HintSize="450,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap2010:Annotation.AnnotationText="This business exception triggers an email to be sent over" DisplayName="Target appears - Throws a Business Exception" sap:VirtualizedContainerService.HintSize="450,238.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[in_Config(&quot;Login_BE_Body&quot;).ToString]" DisplayName="Send Business Exception Mail Message" Email="[str_OutlookUsername]" EnableSSL="True" From="[str_OutlookUsername]" sap:VirtualizedContainerService.HintSize="388,181.33333333333334" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="[str_OutlookUsername]" Port="587" SecureConnection="Auto" SecurePassword="[str_OutlookPassword]" Server="smtp-mail.outlook.com" Subject="[in_Config(&quot;Login_BE_Subject&quot;).ToString]" To="[in_Config(&quot;ExceptionEmailAddress&quot;).ToString]">
-                    <ui:SendMail.Files>
-                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                    </ui:SendMail.Files>
-                  </ui:SendMail>
+                  <Throw DisplayName="Throw Business Rule Exception" Exception="[new BusinessRuleException(String.Format(&quot; Invalid Credentials !!&quot; + Environment.NewLine + &quot;The credentials provided are incorrect, check on them then restart&quot;))]" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
@@ -238,7 +238,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&lt;&lt; Log In successful &gt;&gt;&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;&lt;&lt; Log In successful &gt;&gt;&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
