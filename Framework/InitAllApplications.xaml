@@ -97,10 +97,10 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME_Open - Invoke Workflow File (ACME-Files\ACME_Open.xaml)" sap:VirtualizedContainerService.HintSize="354,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ACME-Files\ACME_LogIn.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME_Open - Invoke Workflow File (ACME-Files\ACME_Open.xaml)" sap:VirtualizedContainerService.HintSize="354,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ACME-Files\System1_Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ACMEURLLink">[in_Config("ACME_URL_Link").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ACMECredentials">[in_Config("ACME_Credentials").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_System1URL">[in_Config("ACME_URL_Link").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_System1Credential">[in_Config("ACME_Credentials").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
