@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ACME_LogOut" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1068,1082.6666666666667" sap2010:WorkflowViewState.IdRef="ACME_LogOut_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ACME_LogOut" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1006,538" sap2010:WorkflowViewState.IdRef="ACME_LogOut_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -40,6 +40,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.Credentials.Activities</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,23 +92,34 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ACME_LogOut" sap:VirtualizedContainerService.HintSize="1078,1018" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ACME_LogOut" sap:VirtualizedContainerService.HintSize="1016,473.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="bool_LoggedIn" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NCheckState DisplayName="Check App State 'Dashboard Home Dashboard'" sap:VirtualizedContainerService.HintSize="1016,930" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
+    <uix:NCheckState DisplayName="Check App State 'Dashboard Home Dashboard'" Exists="[bool_LoggedIn]" sap:VirtualizedContainerService.HintSize="954,385.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
       <uix:NCheckState.IfExists>
-        <Sequence DisplayName="Target appears - Log Out" sap:VirtualizedContainerService.HintSize="512,686" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Target appears - Log Out" sap:VirtualizedContainerService.HintSize="450,141.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Log Out of ACME" sap:VirtualizedContainerService.HintSize="450,598" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Log Out of ACME" sap:VirtualizedContainerService.HintSize="388,50.666666666666664" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -128,7 +140,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CVScreenId="8e8930e6-5144-47aa-9186-42652a980836" CvTextArea="1707, 211, 77, 24" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1687, 185, 120, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="5c2ee4cf-06df-4ff4-9638-681e0d2bf8e2" InformativeScreenshot="279285e259a6c5ea785f2d5e54d38dd8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="8e8930e6-5144-47aa-9186-42652a980836" CvTextArea="1468, 211, 196, 19" CvTextArgument="Switch to new theme" CvType="Text" DesignTimeRectangle="1449, 185, 238, 75" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Switch to new theme' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Switch to new theme' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Switch to new theme' /&gt;" Guid="f06eb1c2-79cc-4f22-917e-2c460546eddc" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -153,7 +165,7 @@
             </uix:NApplicationCard.TargetApp>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
@@ -171,10 +183,10 @@
         </Sequence>
       </uix:NCheckState.IfNotExists>
       <uix:NCheckState.Target>
-        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="52, 260, 1755, 248" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl class='col-lg-12' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='col-lg-12' tag='DIV' type='' aaname='                       ' check:innerText='Dashboard&amp;#xD;&amp;#xA;Home Dashboard' /&gt;" Guid="a87cbeec-dbab-476a-b4b5-18e54b88f70f" InformativeScreenshot="ec7bd6fa2df6fb064151307f5a741a13.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="52, 258, 1755, 248" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl class='col-lg-12' visibleinnertext='Dashboard&amp;#xA;Home Dashboard' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl class='col-lg-12' visibleinnertext='Dashboard&amp;#xA;Home Dashboard' tag='DIV' type='' aaname='                       ' check:text='Dashboard&amp;#xA;                                    &amp;#xA;        &amp;#xA;                                                            Home&amp;#xA;                        Dashboard' /&gt;" Guid="a87cbeec-dbab-476a-b4b5-18e54b88f70f" InformativeScreenshot="f072b34c824fc3f91e0f7dc847468965.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
           <uix:TargetAnchorable.Anchors>
-            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-              <uix:Target CVScreenId="8e8930e6-5144-47aa-9186-42652a980836" CvTextArea="72, 208, 1712, 25" CvTextArgument="ACME System 1 Home Switch to new theme Log Out" CvType="Text" DesignTimeRectangle="75, 185, 1710, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='bs-example-navbar-collapse-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bs-example-navbar-collapse-1' tag='DIV' type='' class='collapse navbar-collapse' aaname='                      ' /&gt;" Guid="4137d5c7-40df-4f01-9d7b-48190841fbe1" SearchSteps="Selector" />
+            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+              <uix:Target CVScreenId="8e8930e6-5144-47aa-9186-42652a980836" CvTextArea="72, 208, 1712, 25" CvTextArgument="ACME System 1 Home Switch to new theme Log Out" CvType="Text" DesignTimeRectangle="75, 183, 1710, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='bs-example-navbar-collapse-1' class='collapse navbar-collapse' visibleinnertext='Home&amp;#xA;Switch to new theme&amp;#xA;Log Out' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bs-example-navbar-collapse-1' class='collapse navbar-collapse' visibleinnertext='Home&amp;#xA;Switch to new theme&amp;#xA;Log Out' tag='DIV' type='' aaname='                      ' /&gt;" Guid="4137d5c7-40df-4f01-9d7b-48190841fbe1" SearchSteps="Selector" />
             </scg:List>
           </uix:TargetAnchorable.Anchors>
         </uix:TargetAnchorable>

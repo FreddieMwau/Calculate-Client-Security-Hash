@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="InitAllApplicationsTestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="819.333333333333,1438.66666666667" sap2010:WorkflowViewState.IdRef="TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="InitAllApplicationsTestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1102,2038.666666666667" sap2010:WorkflowViewState.IdRef="TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -29,19 +29,28 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Testing</x:String>
       <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="104">
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -49,6 +58,7 @@
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
@@ -66,9 +76,28 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Verify if the InitAllApplications workflow works as expected.&#xA;The verification should check if after opening the applications, the expected state is reached." DisplayName="InitAllApplicationsTestCase" sap:VirtualizedContainerService.HintSize="696.666666666667,1274" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Verify if the InitAllApplications workflow works as expected.&#xA;The verification should check if after opening the applications, the expected state is reached." DisplayName="InitAllApplicationsTestCase" sap:VirtualizedContainerService.HintSize="1112,1974" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
     </Sequence.Variables>
@@ -78,62 +107,113 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - InitAllApplicationsTestCase" sap:VirtualizedContainerService.HintSize="654.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;InitAllApplicationsTestCase started.&quot;]" />
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="654.666666666667,206" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message - InitAllApplicationsTestCase" sap:VirtualizedContainerService.HintSize="1050,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;InitAllApplicationsTestCase started.&quot;]" />
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="1050,530.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
           <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="388,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="654.666666666667,206" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="1050,320.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllApplications workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework/InitAllApplications.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllApplications workflow" sap:VirtualizedContainerService.HintSize="388,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework/InitAllApplications.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Check if the applications are in the expected state" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="654.666666666667,510" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Check if the applications are in the expected state" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="1050,812.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Enable and change as needed" sap:VirtualizedContainerService.HintSize="612.666666666667,233.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="576,154.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" Expression="{x:Null}" KeepScreenshots="{x:Null}" OutputArgument="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify activity output" sap:VirtualizedContainerService.HintSize="534,62.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
-              <uta:VerifyControlAttribute.ActivityToTest>
-                <ActivityAction />
-              </uta:VerifyControlAttribute.ActivityToTest>
-              <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
-                <ActivityFunc x:TypeArguments="x:Object">
-                  <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1" />
-                </ActivityFunc>
-              </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
-            </uta:VerifyControlAttribute>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="612.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+      <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify activity output" sap:VirtualizedContainerService.HintSize="988,470.6666666666667" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyControlAttribute.ActivityToTest>
+          <ActivityAction>
+            <uix:NCheckState DisplayName="Check if Logged in Dashboard" sap:VirtualizedContainerService.HintSize="954,328.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
+              <uix:NCheckState.Exists>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <VariableReference x:TypeArguments="x:Boolean">
+                    <VariableReference.Variable>
+                      <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID0" Name="_autogenerated_Exists" />
+                    </VariableReference.Variable>
+                  </VariableReference>
+                </OutArgument>
+              </uix:NCheckState.Exists>
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.OutUiElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <VariableReference x:TypeArguments="ui:UiElement">
+                    <VariableReference.Variable>
+                      <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                    </VariableReference.Variable>
+                  </VariableReference>
+                </OutArgument>
+              </uix:NCheckState.OutUiElement>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="52, 191, 1755, 248" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl class='col-lg-12' tag='DIV' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl class='col-lg-12' tag='DIV' type='' aaname='                       ' check:innerText='Dashboard&amp;#xD;&amp;#xA;Home Dashboard' /&gt;" Guid="a6ca30a5-d2bb-41f8-9b9b-bf2249dd5192" ImageBase64="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aNGiReWxKk/eUBOXmGx3LAl59xUDRP2IF/9+99130/bt28uDSVzy8t/+7d/aHjliwLr//vsnPWbeGVkX0/g23UEn77KI8d1q9e9v3hlceSNdq+LMujjDLnt/N998czpz5kzliHHxnYLx3YLZ4y6//PLyZ92uvPtq9r2FMx3f4u8phtHsfcT7He97u/KGPOMbAAAAAADdruvGtx07duSeCRajWCN5lyiczmURYwDKuzRh3uvLOyuo3aGkKu/579y5s/LbCy6m8S0+kzhDsR2N3t+8y0nGyBYDava46TxmVYyk2fuK8s7eyzvzcbqjX94ZnM3+RmY6voX672mL4n2vHzibyXv+xjcAAAAAALpdV41vcXZR3vegLV68uOFZbyFvvHr22Wcrv21dXNbye9/73qT7avT6YiCrP3bjxo1tjxwxFGbvI8bH/fv3V357wcU0vkV33XVXW4997NixScNWnAl26tSpyhG1nnzyyZpjo/nz57c9hMX9//jHP665n3iP9+7dWznigrzxLR7zk08+qRzRmvh7jb/b7P1EszG+xeutP+Mu7ife/1bF5xqfb/Y+IuMbAAAAAADdrivGtxir4n7rR48oxrj67+WqlzeCTXWZyjwx6MT3etXfT9To9eV911wrzzdrdHQ0zZ07t+Y+4vKIcZnEehfb+NbO9+p9/PHHk85ki6YaK/NGpGj16tUtf99co8813vN47+s1+kwbfd9gnng98b7Un8EZzcb4Fo8f72v2fqI777xzykteVk31/I1vAAAAAAB0u2/0+Pbll1+mo0ePls+wyfs/+lsdd+KMufheruxtL7nkkikvVZkVg0Sj4S1q9PpiAPrNb34z6fibbrqppQHub3/7W3kkrL/9r3/969xx6WIb36L4jOIMtanGsBjR4tKN9be9/fbbm45BW7ZsmfS3Ef+OkarZ2WiNHneqv428y11GrQ5+Mfg+9dRTac6cOZPuI5qN8S3E+xrvb/a+ong/4n1pJJ7/pk2bcv/3GBnfAAAAAADodhfF+HbbbbeVv2cqBo1mxZi2atWq9K//+q/lEaT+vqrF//n/29/+tuXBI2/Euuyyy9Lu3bsb3sfY2Fh65pln0hVXXDHpttmm+s6vRpeqjPFlxYoV5WEwO2rFc/noo4/Sc889l6655ppJt4uzrN5///3K0bUuxvGtWgw98flW36cYVuPsvfXr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" InformativeScreenshot="5f75edee5157176b6cae007f41fe87de.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="180, 469, 1500, 1183" FullSelectorArgument="&lt;webctrl class='main-container' tag='DIV' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl class='main-container' tag='DIV' type='' aaname='                                   ' check:innerText='Welcome, mutuahfredrick@gmail.com to System 1.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;If this is your first time logging in, please make' /&gt;" Guid="04f18dbb-8cda-4387-aed4-6e664f65f1c9" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </ActivityAction>
+        </uta:VerifyControlAttribute.ActivityToTest>
+        <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+          <ActivityFunc x:TypeArguments="x:Object">
+            <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+              <uta:ArgumentsBridge.Input>
+                <InArgument x:TypeArguments="x:Object">
+                  <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+                </InArgument>
+              </uta:ArgumentsBridge.Input>
+            </uta:ArgumentsBridge>
+          </ActivityFunc>
+        </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+        <uta:VerifyControlAttribute.Expression>
+          <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+        </uta:VerifyControlAttribute.Expression>
+      </uta:VerifyControlAttribute>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="988,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
