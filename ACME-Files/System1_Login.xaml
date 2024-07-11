@@ -218,7 +218,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DelayBefore="10" DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,510" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="10" Version="V3">
+            <uix:NCheckState DelayBefore="10" DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,510" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence sap2010:Annotation.AnnotationText="This business exception triggers an email to be sent over" DisplayName="Target appears - Throws a Business Exception" sap:VirtualizedContainerService.HintSize="450,238.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
