@@ -137,7 +137,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Edge Browser" sap:VirtualizedContainerService.HintSize="1050,1771.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" IsIncognito="{x:Null}" OpenMode="Always" OutUiElement="{x:Null}" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Edge Browser" sap:VirtualizedContainerService.HintSize="1050,1771.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="d0739110-657e-4cab-929a-d9da12beff16" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -154,12 +154,12 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:GetSecureCredential CredentialType="Generic" DisplayName="Get ACME Credentials" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[str_ACMEPassword]" PersistanceType="Enterprise" Result="{x:Null}" Target="[in_str_System1Credential]" Username="[str_ACMEUsername]" />
-            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Email Address/Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" OutUiElement="{x:Null}" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" SecureText="{x:Null}" Text="[str_ACMEUsername]" Timeout="{x:Null}" Version="V3">
+            <p:GetSecureCredential CredentialType="Generic" DisplayName="Get ACME Credentials" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[str_ACMEPassword]" PersistanceType="Enterprise" Target="[in_str_System1Credential]" Username="[str_ACMEUsername]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Email Address/Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Text="[str_ACMEUsername]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CVScreenId="ef84d3d5-5170-44e1-97b7-f452a80f2350" CvElementArea="177, 625, 732, 58" CvType="InputBox" DesignTimeRectangle="180, 561, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="a13e7dc1-15b8-4ced-9a59-a4da7a7443e1" ImageBase64="" InformativeScreenshot="8a408fac48f212a6f46f531e0836848a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="ef84d3d5-5170-44e1-97b7-f452a80f2350" CvTextArea="178, 594, 63, 19" CvTextArgument="Email:" CvType="Text" DesignTimeRectangle="180, 523, 63, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' check:innerText='Email:' /&gt;" Guid="f4592775-2439-4903-a114-d4c748585f4d" ImageBase64="" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -176,11 +176,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Double" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsPassword="True" OutUiElement="{x:Null}" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" SecureText="[str_ACMEPassword]" Timeout="{x:Null}" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" SecureText="[str_ACMEPassword]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CVScreenId="0627ce58-17b6-40d8-8f22-06404106245c" CvElementArea="176, 736, 732, 57" CvType="InputBox" DesignTimeRectangle="180, 672, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control ' aaname='Password:' /&gt;" Guid="2efd1b86-0df6-45d2-a793-f0ee5f8f109a" ImageBase64="" InformativeScreenshot="34767aacc56a20667a8e18e001a591f6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="0627ce58-17b6-40d8-8f22-06404106245c" CvTextArea="178, 705, 106, 19" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="180, 634, 106, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' check:innerText='Password:' /&gt;" Guid="8c24b49b-9b16-47e2-a306-11dbd2bb6a18" ImageBase64="" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -197,11 +197,11 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="Smooth" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click Login Button" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="{x:Null}" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="{x:Null}" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click Login Button" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CVScreenId="99d36914-9f29-4502-9791-8b8be76e4307" CvElementArea="176, 872, 94, 55" CvTextArea="196, 888, 54, 25" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="180, 808, 89, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary' aaname='                             Login                         ' check:innerText='Login' /&gt;" Guid="4ab932ce-a32b-40ea-bdfa-2f12d9da09fd" ImageBase64="" InformativeScreenshot="0c1f910bf7a865a325c70aa4e2f3c9d5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="61ec5909-886d-4342-a20a-bb09bd3ae900" CvElementArea="271, 804, 261, 54" CvTextArea="292, 820, 220, 24" CvTextArgument="Forgot Your Password?" CvType="Button" DesignTimeRectangle="275, 808, 256, 50" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                                 Forgot Your Password?                             ' tag='A' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='                                 Forgot Your Password?                             ' tag='A' type='' class='btn bg-warning' check:innerText='Forgot Your Password?' /&gt;" Guid="756eb134-cf81-4b00-be4c-1f52e07fb799" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -218,7 +218,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="10" DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,510" sap2010:WorkflowViewState.IdRef="NCheckState_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="10" Version="V3">
+            <uix:NCheckState DelayBefore="10" DisplayName="Check if Invalid Message Exists" Exists="[bool_InvalidCredentials]" sap:VirtualizedContainerService.HintSize="954,510" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d0739110-657e-4cab-929a-d9da12beff16" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence sap2010:Annotation.AnnotationText="This business exception triggers an email to be sent over" DisplayName="Target appears - Throws a Business Exception" sap:VirtualizedContainerService.HintSize="450,238.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
