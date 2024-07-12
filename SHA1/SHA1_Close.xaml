@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_Close" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="872,550.6666666666666" sap2010:WorkflowViewState.IdRef="SHA1_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_Close" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,1567" sap2010:WorkflowViewState.IdRef="SHA1_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -96,13 +96,13 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHA1_Close" sap:VirtualizedContainerService.HintSize="516.6666666666666,486" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHA1_Close" sap:VirtualizedContainerService.HintSize="1178,1502" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454.6666666666667,398" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1116,1414" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,33 +110,33 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap:VirtualizedContainerService.HintSize="1078,1163" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NCheckState DisplayName="Check App State 'This free'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="3" Version="V3">
+          <uix:NCheckState DisplayName="Check App State 'This free'" sap:VirtualizedContainerService.HintSize="1016,1075" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="3" Version="V3">
             <uix:NCheckState.IfExists>
-              <Sequence DisplayName="Target appears - Close Browser Tab" sap:VirtualizedContainerService.HintSize="512,807.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Target appears - Close Browser Tab" sap:VirtualizedContainerService.HintSize="512,755" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: SHA1 Hash Generator Online" sap:VirtualizedContainerService.HintSize="450,544" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="7a8a1f33-034e-41b4-b5f1-e2b18470065a" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: SHA1 Hash Generator Online" sap:VirtualizedContainerService.HintSize="450,497" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="7a8a1f33-034e-41b4-b5f1-e2b18470065a" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Close the SHA1 Web page" sap:VirtualizedContainerService.HintSize="416,252.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Close the SHA1 Web page" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Edge Browser Application" sap:VirtualizedContainerService.HintSize="354,162" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge">
+                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Edge Browser Application" sap:VirtualizedContainerService.HintSize="354,158" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -157,7 +157,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NApplicationCard>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;&lt;&lt; SHA1 Web page is open &gt;&gt;&quot;]">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;&lt;&lt; SHA1 Web page is open &gt;&gt;&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -168,20 +168,12 @@
               </Sequence>
             </uix:NCheckState.IfExists>
             <uix:NCheckState.IfNotExists>
-              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,263.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&lt;&lt; SHA1 Web page not located &gt;&gt;&quot;]">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:LogMessage>
               </Sequence>
             </uix:NCheckState.IfNotExists>
             <uix:NCheckState.Target>
@@ -195,7 +187,7 @@
             </uix:NCheckState.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -203,7 +195,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1082,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -214,7 +206,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
