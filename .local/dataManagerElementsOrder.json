@@ -130,15 +130,15 @@
       "Path": "ACME-Files/System1_Close.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_ACMEPassword&Sequence_17",
+        "str_ACMEUsername&Sequence_17",
+        "bool_InvalidCredentials&Sequence_17",
+        "str_ACMEPassword&Sequence_18",
+        "str_ACMEUsername&Sequence_18",
+        "bool_InvalidCredentials&Sequence_18",
         "str_ACMEPassword&Sequence_11",
         "str_ACMEUsername&Sequence_11",
         "bool_InvalidCredentials&Sequence_11",
-        "str_ACMEPassword&Sequence_6",
-        "str_ACMEUsername&Sequence_6",
-        "bool_InvalidCredentials&Sequence_6",
-        "str_ACMEPassword&Sequence_12",
-        "str_ACMEUsername&Sequence_12",
-        "bool_InvalidCredentials&Sequence_12",
         "bool_DashboardPage&Sequence_1",
         "bool_WorkItemPage&Sequence_1"
       ],
@@ -202,9 +202,9 @@
       "Path": "ACME-Files/System1_Extract_WIsDataTable.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_WIID&Sequence_16",
-        "str_ActionURL&Sequence_16",
-        "str_Type&Sequence_16",
+        "str_WIID&Sequence_19",
+        "str_ActionURL&Sequence_19",
+        "str_Type&Sequence_19",
         "str_Test&Sequence_1",
         "ExtractDataTable&Sequence_1"
       ],
@@ -245,7 +245,7 @@
       "Path": "ACME-Files/System1_Extract_ClientInformation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_ExtractedFullText&Sequence_2"
+        "str_ExtractedFullText&Sequence_5"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_ClientID",
@@ -288,11 +288,7 @@
     {
       "Path": "Mail/SendEmail.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "str_OutlookCredentials&Sequence_1",
-        "str_OutlookUsername&Sequence_1",
-        "str_OutlookPassword&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_To_String",
         "in_Subject_String",
