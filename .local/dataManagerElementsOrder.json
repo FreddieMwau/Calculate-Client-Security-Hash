@@ -91,7 +91,12 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_HashResult&Sequence_1",
+        "str_ClientCountry&Sequence_1",
+        "str_ClientName&Sequence_1",
+        "str_ClientID&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_Config"
@@ -128,11 +133,14 @@
         "str_ACMEPassword&Sequence_11",
         "str_ACMEUsername&Sequence_11",
         "bool_InvalidCredentials&Sequence_11",
-        "bool_DashboardPage&Sequence_1",
-        "bool_WorkItemPage&Sequence_1",
         "str_ACMEPassword&Sequence_6",
         "str_ACMEUsername&Sequence_6",
-        "bool_InvalidCredentials&Sequence_6"
+        "bool_InvalidCredentials&Sequence_6",
+        "str_ACMEPassword&Sequence_12",
+        "str_ACMEUsername&Sequence_12",
+        "bool_InvalidCredentials&Sequence_12",
+        "bool_DashboardPage&Sequence_1",
+        "bool_WorkItemPage&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -236,6 +244,42 @@
         "in_ConfigFile",
         "in_ConfigSheets",
         "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME-Files/System1_Navigate_To_WIDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_System1_WorkItemURL",
+        "in_WIID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME-Files/System1_Extract_ClientInformation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_FullText&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_ClientID",
+        "out_ClientName",
+        "out_ClientCountry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SHA1/SHA1_ProcessHash.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_HashResult",
+        "in_HashFormula"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
