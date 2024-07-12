@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_ProcessHash" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_ProcessHash" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_HashFormula" Type="InArgument(x:String)" />
     <x:Property Name="out_HashResult" Type="OutArgument(x:String)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>872,1167.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>872,624</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SHA1_ProcessHash_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,30 +111,30 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Retrieves the HashResult based on the input HashFormula" DisplayName="SHA1_ProcessHash" sap:VirtualizedContainerService.HintSize="512,1102.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Retrieves the HashResult based on the input HashFormula" DisplayName="SHA1_ProcessHash" sap:VirtualizedContainerService.HintSize="512,559.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: SHA1 Hash Generator Online" sap:VirtualizedContainerService.HintSize="450,816.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="38522696-037b-4f2f-9543-4b19ceb925df" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: SHA1 Hash Generator Online" sap:VirtualizedContainerService.HintSize="450,440.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="38522696-037b-4f2f-9543-4b19ceb925df" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,565.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Generating SHA1 Code" sap:VirtualizedContainerService.HintSize="416,198.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter your text below'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="38522696-037b-4f2f-9543-4b19ceb925df" Text="[in_HashFormula]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Hash Formula" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="38522696-037b-4f2f-9543-4b19ceb925df" Text="[in_HashFormula]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://sha1online.net/" CVScreenId="3d89a4a0-4b6d-463d-9cad-8fef305e0bcf" CvElementArea="312, 498, 1233, 222" CvType="InputBox" DesignTimeRectangle="315, 501, 1232, 219" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='txt1' tag='TEXTAREA' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='txt1' tag='TEXTAREA' type='' class='texts' aaname='' /&gt;" Guid="8e605007-8b3b-494e-8bbf-439c3cece252" InformativeScreenshot="c1aad0b0f165a5fc9c5e47a718f373af.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 Hash Generator Online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="3d89a4a0-4b6d-463d-9cad-8fef305e0bcf" CvTextArea="321, 460, 204, 21" CvTextArgument="Enter your text below:" CvType="Text" DesignTimeRectangle="322, 453, 1140, 40" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' aaname='Enter your text below:' check:innerText='Enter your text below:' /&gt;" Guid="b4d7007a-74d4-4a24-b7e2-2e584e9de4ec" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -152,16 +152,16 @@
               </uix:NTypeInto.VerifyOptions>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NGetText DisplayName="Get Text 'SHA1 Hash'" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="38522696-037b-4f2f-9543-4b19ceb925df" TextString="[out_HashResult]" Version="V3">
+            <uix:NGetText DisplayName="Get generated SHA1 Code" sap:VirtualizedContainerService.HintSize="354,50.666666666666664" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="38522696-037b-4f2f-9543-4b19ceb925df" TextString="[out_HashResult]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://sha1online.net/" CVScreenId="331fc3bf-83fa-434e-a6d7-50ac43555e08" CvTextArea="319, 660, 579, 21" CvType="AnyWordGroup" DesignTimeRectangle="315, 651, 1230, 218" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='txt2' tag='TEXTAREA' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='txt2' tag='TEXTAREA' type='' class='texts noboder' aaname='' /&gt;" Guid="fdf76273-0d31-4bd5-8721-b53143491c9f" ImageBase64="" InformativeScreenshot="f6c8e64332dd8e81f0f2d84c2cd6a509.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 Hash Generator Online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="331fc3bf-83fa-434e-a6d7-50ac43555e08" CvTextArea="319, 610, 426, 24" CvTextArgument="SHA1 Hash of your string: [ Copy to clipboard" CvType="Text" DesignTimeRectangle="322, 603, 1140, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='3' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' aaname='SHA1 Hash of your string: &amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;' check:innerText='SHA1 Hash of your string: [ Copy to clipboard ]' /&gt;" Guid="34788eba-e0f1-4526-902c-450dab057473" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -169,7 +169,7 @@
               </uix:NGetText.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -187,6 +187,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[out_HashResult]" />
   </Sequence>
 </Activity>
