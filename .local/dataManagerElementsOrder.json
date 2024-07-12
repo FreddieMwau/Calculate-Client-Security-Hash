@@ -202,24 +202,6 @@
       "Path": "ACME-Files/System1_Extract_WIsDataTable.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "TransactionItem&",
-        "SystemException&",
-        "BusinessException&",
-        "TransactionNumber&",
-        "Config&",
-        "RetryNumber&",
-        "TransactionField2&",
-        "TransactionField1&",
-        "TransactionID&",
-        "dt_TransactionData&",
-        "ConsecutiveSystemExceptions&",
-        "str_OutlookCredentials&",
-        "str_OutlookPassword&",
-        "str_OutlookUsername&",
-        "str_RecepientEmailAddress&",
-        "str_ExceptionEmailSubject&",
-        "str_ExceptionEmailBody&",
-        "ShouldStop&",
         "str_WIID&Sequence_16",
         "str_ActionURL&Sequence_16",
         "str_Type&Sequence_16",
@@ -263,7 +245,7 @@
       "Path": "ACME-Files/System1_Extract_ClientInformation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_FullText&Sequence_2"
+        "str_ExtractedFullText&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_ClientID",
@@ -280,6 +262,25 @@
       "ArgumentsSectionElementsOrder": [
         "out_HashResult",
         "in_HashFormula"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME-Files/System1_Navigate_To_UpdateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME-Files/System1_UpdateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Status",
+        "in_Comment"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
