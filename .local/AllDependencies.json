@@ -21893,15 +21893,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joking Genius\\.nuget\\packages\\": {}
+    "C:\\Users\\FredrickMutua\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Calculate-Client-Security-Hash",
       "projectName": "Calculate-Client-Security-Hash",
-      "projectPath": "C:\\Users\\Joking Genius\\Documents\\UiPath\\Calculate-Client-Security-Hash\\.local",
-      "packagesPath": "C:\\Users\\Joking Genius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joking Genius\\Documents\\UiPath\\Calculate-Client-Security-Hash\\.local"
+      "projectPath": "C:\\Users\\FredrickMutua\\Documents\\UiPath\\Calculate-Client-Security-Hash\\.local",
+      "packagesPath": "C:\\Users\\FredrickMutua\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FredrickMutua\\Documents\\UiPath\\Calculate-Client-Security-Hash\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -21937,7 +21937,7 @@
             "version": "[24.10.0, 24.10.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Joking Genius\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\FredrickMutua\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
