@@ -284,6 +284,22 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Mail/SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_OutlookCredentials&Sequence_1",
+        "str_OutlookUsername&Sequence_1",
+        "str_OutlookPassword&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_To_String",
+        "in_Subject_String",
+        "in_Body_String"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
